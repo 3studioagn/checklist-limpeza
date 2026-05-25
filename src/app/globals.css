@@ -1,13 +1,13 @@
 :root {
   --color-bg: #111111;
   --color-surface: #181818;
-  --color-line: #1f1f1f;
-  --color-line-strong: #2e2e2e;
+  --color-line: #2d2d2d;
+  --color-line-strong: #404040;
   --color-text: #f4f4f4;
-  --color-text-dim: #8a8a8a;
-  --color-text-muted: #4a4a4a;
-  --color-accent: #f5c518;
-  --color-accent-dim: #aa8810;
+  --color-text-dim: #9a9a9a;
+  --color-text-muted: #5a5a5a;
+  --color-accent: #ffdf88;
+  --color-accent-dim: #b89c5a;
   --color-danger: #ff5252;
 
   --space-1: 4px;

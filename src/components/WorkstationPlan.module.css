@@ -213,12 +213,12 @@
 }
 
 .selected .mesaShape {
-  fill: rgba(245, 197, 24, 0.1);
+  fill: rgba(255, 223, 136, 0.1);
   stroke: var(--color-accent);
 }
 
 .selected .floorZone {
-  fill: rgba(245, 197, 24, 0.04);
+  fill: rgba(255, 223, 136, 0.04);
   stroke: var(--color-accent);
 }
 
