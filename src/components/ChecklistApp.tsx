@@ -35,7 +35,6 @@ export default function ChecklistApp() {
 
   useEffect(() => {
     // Set after mount: Date depende do TZ do client, set no render causa hydration mismatch.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCleaningDate((prev) => prev || todayISO());
   }, []);
 
