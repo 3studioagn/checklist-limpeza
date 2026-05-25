@@ -1,0 +1,80 @@
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  padding: var(--space-5) var(--space-6);
+  gap: var(--space-3);
+  background: var(--color-bg);
+}
+
+.success {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: var(--space-5);
+  background: var(--color-bg);
+}
+
+.successCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-7);
+  max-width: 520px;
+  width: 100%;
+  border: var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  text-align: left;
+  animation: successIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes successIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.successLabel {
+  font-size: 11px;
+  letter-spacing: var(--letter-tech);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.successTitle {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: var(--letter-tight);
+  color: var(--color-text);
+}
+
+.successText {
+  font-size: 14px;
+  color: var(--color-text-dim);
+  line-height: 1.6;
+}
+
+.successButton {
+  align-self: flex-start;
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  border: var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 12px;
+  letter-spacing: var(--letter-tech);
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.successButton:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}

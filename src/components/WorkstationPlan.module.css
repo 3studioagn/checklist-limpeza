@@ -1,0 +1,254 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  overflow: hidden;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 280px);
+  display: block;
+}
+
+.frame {
+  fill: none;
+  stroke: var(--color-line);
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+}
+
+.frameLabel {
+  fill: var(--color-text-muted);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.areaGroup {
+  cursor: pointer;
+  outline: none;
+}
+
+.areaGroup * {
+  pointer-events: all;
+}
+
+.areaGroup text,
+.areaGroup line,
+.areaGroup circle,
+.areaGroup ellipse,
+.areaGroup rect,
+.areaGroup path {
+  transition:
+    fill 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    r 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hitArea {
+  fill: transparent;
+}
+
+/* Base shapes */
+.shape {
+  fill: none;
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+}
+
+.mesaShape {
+  fill: none;
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+}
+
+.floorZone {
+  fill: none;
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+}
+
+.gabinete {
+  fill: none;
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+}
+
+.key {
+  fill: none;
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+}
+
+.mouse {
+  fill: none;
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+}
+
+.drawer {
+  fill: none;
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+}
+
+.monitorStem {
+  stroke: var(--color-line-strong);
+  stroke-width: 1;
+  fill: none;
+}
+
+.guideLine {
+  stroke: var(--color-line);
+  stroke-width: 1;
+}
+
+/* Dots */
+.areaDot {
+  fill: var(--color-accent);
+}
+
+.gabineteDot {
+  fill: var(--color-accent);
+}
+
+.drawerDot {
+  fill: var(--color-accent);
+}
+
+/* Labels */
+.label {
+  fill: var(--color-text);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.sublabel {
+  fill: var(--color-text-dim);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.zoneLabel {
+  fill: var(--color-text-muted);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.innerLabel {
+  fill: var(--color-text-muted);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.shapeLabel {
+  fill: var(--color-text-dim);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Hover (toda a área reage) */
+.areaGroup:hover .shape,
+.areaGroup:hover .mesaShape,
+.areaGroup:hover .gabinete,
+.areaGroup:hover .floorZone,
+.areaGroup:hover .key,
+.areaGroup:hover .mouse,
+.areaGroup:hover .drawer,
+.areaGroup:hover .monitorStem {
+  stroke: var(--color-text-dim);
+}
+
+.areaGroup:hover .label {
+  fill: var(--color-accent);
+}
+
+.areaGroup:hover .guideLine {
+  stroke: var(--color-line-strong);
+}
+
+.areaGroup:hover .areaDot,
+.areaGroup:hover .drawerDot,
+.areaGroup:hover .gabineteDot {
+  r: 4;
+}
+
+.areaGroup:focus-visible .shape,
+.areaGroup:focus-visible .mesaShape,
+.areaGroup:focus-visible .gabinete,
+.areaGroup:focus-visible .floorZone,
+.areaGroup:focus-visible .drawer,
+.areaGroup:focus-visible .key,
+.areaGroup:focus-visible .mouse {
+  stroke: var(--color-accent);
+}
+
+/* Selecionado */
+.selected .shape,
+.selected .key,
+.selected .drawer,
+.selected .mouse {
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+}
+
+.selected .gabinete {
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+}
+
+.selected .gabineteDot {
+  fill: var(--color-bg);
+  r: 3.5;
+}
+
+.selected .mesaShape {
+  fill: rgba(245, 197, 24, 0.1);
+  stroke: var(--color-accent);
+}
+
+.selected .floorZone {
+  fill: rgba(245, 197, 24, 0.04);
+  stroke: var(--color-accent);
+}
+
+.selected .monitorStem {
+  stroke: var(--color-accent);
+}
+
+.selected .shapeLabel {
+  fill: var(--color-bg);
+  font-weight: 600;
+}
+
+.selected .innerLabel {
+  fill: var(--color-accent);
+}
+
+.selected .zoneLabel {
+  fill: var(--color-accent);
+}
+
+.selected .areaDot,
+.selected .drawerDot {
+  fill: var(--color-bg);
+  r: 3.5;
+}
+
+.selected .label {
+  fill: var(--color-accent);
+}
+
+.selected .guideLine {
+  stroke: var(--color-accent);
+}

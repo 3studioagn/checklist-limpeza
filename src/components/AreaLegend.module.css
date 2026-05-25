@@ -1,0 +1,161 @@
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding: var(--space-3) var(--space-2);
+  flex-wrap: wrap;
+}
+
+.chips {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-thin);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-dim);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--color-line-strong);
+  color: var(--color-text);
+}
+
+.chipCode {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.chipDone {
+  color: var(--color-text-muted);
+  border-color: var(--color-line);
+}
+
+.chipDone .chipLabel {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.chipDone .chipCode {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.error {
+  font-size: 11px;
+  color: var(--color-danger);
+  letter-spacing: 0.04em;
+  max-width: 280px;
+  text-align: right;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 240px;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-dim);
+  font-size: 11px;
+  letter-spacing: var(--letter-tech);
+  text-transform: uppercase;
+  justify-content: space-between;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.submit:disabled {
+  cursor: not-allowed;
+}
+
+.submitLabel {
+  flex: 1;
+  text-align: left;
+}
+
+.arrow {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.submitReady {
+  color: var(--color-text);
+  border-color: var(--color-accent);
+  animation: submitGlow 1.8s ease-in-out infinite;
+}
+
+@keyframes submitGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 197, 24, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(245, 197, 24, 0.08);
+  }
+}
+
+.submitReady .arrow {
+  color: var(--color-accent);
+}
+
+.submitReady:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.submitReady:hover .arrow {
+  color: var(--color-bg);
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .legend {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+
+  .submit {
+    min-width: 0;
+  }
+
+  .error {
+    max-width: none;
+    text-align: left;
+  }
+}
